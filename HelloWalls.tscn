@@ -13,7 +13,9 @@ height = 191.297
 
 [node name="Walls" type="Node" parent="."]
 
-[node name="Wall1" type="StaticBody2D" parent="Walls"]
+[node name="Wall1" type="StaticBody2D" parent="Walls" groups=[
+"WALLS",
+]]
 position = Vector2( 732.559, 265.858 )
 __meta__ = {
 "_edit_group_": true
@@ -30,7 +32,9 @@ position = Vector2( 2.39191, -1.73596 )
 rotation = 1.0472
 shape = SubResource( 1 )
 
-[node name="Wall11" type="StaticBody2D" parent="Walls"]
+[node name="Wall11" type="StaticBody2D" parent="Walls" groups=[
+"WALLS",
+]]
 position = Vector2( 997.461, 489.228 )
 rotation = -1.0472
 __meta__ = {
@@ -48,7 +52,9 @@ position = Vector2( 2.39191, -1.73596 )
 rotation = 1.0472
 shape = SubResource( 1 )
 
-[node name="Wall2" type="StaticBody2D" parent="Walls"]
+[node name="Wall2" type="StaticBody2D" parent="Walls" groups=[
+"WALLS",
+]]
 position = Vector2( 513.679, 368.002 )
 rotation = 0.261799
 __meta__ = {
@@ -66,7 +72,9 @@ position = Vector2( 2.39191, -1.73596 )
 rotation = 1.0472
 shape = SubResource( 1 )
 
-[node name="Wall7" type="StaticBody2D" parent="Walls"]
+[node name="Wall7" type="StaticBody2D" parent="Walls" groups=[
+"WALLS",
+]]
 position = Vector2( 566.435, 580.147 )
 rotation = 0.523599
 __meta__ = {
@@ -84,7 +92,9 @@ position = Vector2( 2.39191, -1.73596 )
 rotation = 1.0472
 shape = SubResource( 1 )
 
-[node name="Wall8" type="StaticBody2D" parent="Walls"]
+[node name="Wall8" type="StaticBody2D" parent="Walls" groups=[
+"WALLS",
+]]
 position = Vector2( 385.719, 580.147 )
 rotation = 0.523599
 __meta__ = {
@@ -102,7 +112,9 @@ position = Vector2( 2.39191, -1.73596 )
 rotation = 1.0472
 shape = SubResource( 1 )
 
-[node name="Wall9" type="StaticBody2D" parent="Walls"]
+[node name="Wall9" type="StaticBody2D" parent="Walls" groups=[
+"WALLS",
+]]
 position = Vector2( 912.153, 580.147 )
 rotation = 0.523599
 __meta__ = {
@@ -120,7 +132,9 @@ position = Vector2( 2.39191, -1.73596 )
 rotation = 1.0472
 shape = SubResource( 1 )
 
-[node name="Wall10" type="StaticBody2D" parent="Walls"]
+[node name="Wall10" type="StaticBody2D" parent="Walls" groups=[
+"WALLS",
+]]
 position = Vector2( 731.437, 580.147 )
 rotation = 0.523599
 __meta__ = {
@@ -138,7 +152,9 @@ position = Vector2( 2.39191, -1.73596 )
 rotation = 1.0472
 shape = SubResource( 1 )
 
-[node name="Wall3" type="StaticBody2D" parent="Walls"]
+[node name="Wall3" type="StaticBody2D" parent="Walls" groups=[
+"WALLS",
+]]
 position = Vector2( 196.023, 452.186 )
 rotation = 1.309
 __meta__ = {
@@ -156,7 +172,9 @@ position = Vector2( 2.39191, -1.73596 )
 rotation = 1.0472
 shape = SubResource( 1 )
 
-[node name="Wall6" type="StaticBody2D" parent="Walls"]
+[node name="Wall6" type="StaticBody2D" parent="Walls" groups=[
+"WALLS",
+]]
 position = Vector2( 922.255, 117.693 )
 rotation = -0.261799
 __meta__ = {
@@ -174,7 +192,9 @@ position = Vector2( 2.39191, -1.73596 )
 rotation = 1.0472
 shape = SubResource( 1 )
 
-[node name="Wall4" type="StaticBody2D" parent="Walls"]
+[node name="Wall4" type="StaticBody2D" parent="Walls" groups=[
+"WALLS",
+]]
 position = Vector2( 302.657, 178.306 )
 rotation = 0.785398
 __meta__ = {
@@ -192,7 +212,9 @@ position = Vector2( 2.39191, -1.73596 )
 rotation = 1.0472
 shape = SubResource( 1 )
 
-[node name="Wall5" type="StaticBody2D" parent="Walls"]
+[node name="Wall5" type="StaticBody2D" parent="Walls" groups=[
+"WALLS",
+]]
 position = Vector2( 152.247, 90.7535 )
 rotation = 1.309
 __meta__ = {
