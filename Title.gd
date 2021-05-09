@@ -1,5 +1,5 @@
 extends Panel
-
+class_name Title, "res://icon.png"
 
 # Declare member variables here. Examples:
 var gameScene

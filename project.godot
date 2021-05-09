@@ -8,6 +8,16 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Panel",
+"class": "Title",
+"language": "GDScript",
+"path": "res://Title.gd"
+} ]
+_global_script_class_icons={
+"Title": "res://icon.png"
+}
+
 [application]
 
 config/name="Hello Godot"
