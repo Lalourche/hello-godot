@@ -9,12 +9,18 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Node2D",
+"class": "TimerTest",
+"language": "GDScript",
+"path": "res://TimerTest.gd"
+}, {
 "base": "Panel",
 "class": "Title",
 "language": "GDScript",
 "path": "res://Title.gd"
 } ]
 _global_script_class_icons={
+"TimerTest": "res://icon.png",
 "Title": "res://icon.png"
 }
 
