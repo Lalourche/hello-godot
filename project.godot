@@ -9,6 +9,11 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Node",
+"class": "Main",
+"language": "GDScript",
+"path": "res://Main.gd"
+}, {
 "base": "RigidBody2D",
 "class": "Mob",
 "language": "GDScript",
@@ -30,6 +35,7 @@ _global_script_classes=[ {
 "path": "res://Title.gd"
 } ]
 _global_script_class_icons={
+"Main": "res://icon.png",
 "Mob": "res://dodge_assets/art/enemySwimming_1.png",
 "Player": "res://dodge_assets/art/playerGrey_walk1.png",
 "TimerTest": "res://icon.png",
@@ -39,7 +45,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Hello Godot"
-run/main_scene="res://Title.tscn"
+run/main_scene="res://Main.tscn"
 config/icon="res://icon.png"
 
 [display]
@@ -47,6 +53,10 @@ config/icon="res://icon.png"
 window/size/resizable=false
 window/stretch/mode="2d"
 window/stretch/aspect="keep"
+
+[global]
+
+main=false
 
 [physics]
 
