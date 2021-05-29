@@ -16,9 +16,15 @@ func _ready():
 
 
 func game_over():
+	# Play gameover music
+	$Music.stop()
+	$DeathSound.play()
+	
+	# Stop game
 	$ScoreTimer.stop()
 	$MobTimer.stop()
 	$HUD.show_game_over()
+	
 	# Remove all mobs
 	get_tree().call_group("mobs", "queue_free")
 
@@ -30,6 +36,9 @@ func new_game():
 	# Update HUD
 	$HUD.update_score(score)
 	$HUD.show_message("Get Ready")
+	
+	# Start music
+	$Music.play()
 
 
 func _on_MobTimer_timeout():
