@@ -9,6 +9,11 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "CanvasLayer",
+"class": "Hud",
+"language": "GDScript",
+"path": "res://HUD.gd"
+}, {
 "base": "Node",
 "class": "Main",
 "language": "GDScript",
@@ -35,6 +40,7 @@ _global_script_classes=[ {
 "path": "res://Title.gd"
 } ]
 _global_script_class_icons={
+"Hud": "",
 "Main": "res://icon.png",
 "Mob": "res://dodge_assets/art/enemySwimming_1.png",
 "Player": "res://dodge_assets/art/playerGrey_walk1.png",
