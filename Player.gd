@@ -39,7 +39,7 @@ func _process(delta):
 	else:
 		$AnimatedSprite.stop()
 	
-	# Position	
+	# Position
 	position += velocity * delta
 	var collisionShape: CapsuleShape2D = $CollisionShape2D.shape
 	position.x = clamp(position.x, 0 + collisionShape.radius, screen_size.x - collisionShape.radius)
