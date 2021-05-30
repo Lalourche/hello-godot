@@ -5,7 +5,9 @@ signal hit
 
 export var speed = 400  # How fast the player will move (pixels/sec).
 var screen_size  # Size of the game window.
-
+var target = Vector2() # Hold the clicked position.
+enum InputMode {KEY, TOUCH}
+var current_input_mode = InputMode.KEY # Current input mode
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -17,14 +19,20 @@ func _ready():
 func _process(delta):
 	var velocity = Vector2()  # The player's movement vector.
 	
-	if Input.is_action_pressed("ui_right"):
-		velocity.x += 1
-	if Input.is_action_pressed("ui_left"):
-		velocity.x -= 1
-	if Input.is_action_pressed("ui_down"):
-		velocity.y += 1
-	if Input.is_action_pressed("ui_up"):
-		velocity.y -= 1
+	if current_input_mode == InputMode.KEY:
+		if Input.is_action_pressed("ui_right"):
+			velocity.x += 1
+		if Input.is_action_pressed("ui_left"):
+			velocity.x -= 1
+		if Input.is_action_pressed("ui_down"):
+			velocity.y += 1
+		if Input.is_action_pressed("ui_up"):
+			velocity.y -= 1
+	elif current_input_mode == InputMode.TOUCH:
+		# Move towards the target and stop when close.
+		if position.distance_to(target) > 10:
+			velocity = target - position
+	
 	if velocity.length() > 0:
 		velocity = velocity.normalized() * speed
 		$AnimatedSprite.play()
@@ -54,5 +62,21 @@ func _on_Player_body_entered(body):
 	
 func start(pos):
 	position = pos
+	# Initial target is the start position.
+	target = pos
+	
 	show()
 	$CollisionShape2D.set_deferred("disabled", false)
+
+# Change the target whenever a touch event happens.
+func _input(event):
+	if event is InputEventScreenTouch and event.pressed:
+		#print_debug("TOUCH")
+		current_input_mode = InputMode.TOUCH
+		target = event.position
+	elif Input.is_action_pressed("ui_right") \
+	or Input.is_action_pressed("ui_left") \
+	or Input.is_action_pressed("ui_up") \
+	or Input.is_action_pressed("ui_down"):
+		#print_debug("KEY")
+		current_input_mode = InputMode.KEY
